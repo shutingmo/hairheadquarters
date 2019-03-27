@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Hair Application</title>
+
+         <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="../css/sign_up_style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Sidebar</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <p>Dummy Heading</p>
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="#">Home 1</a></li>
+                            <li><a href="#">Home 2</a></li>
+                            <li><a href="#">Home 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Styling</a>
+                    </li>
+                    <li>
+                        <a href="#">Healthy Hair Bible</a>
+                    </li>
+                    <li>
+                        <a href="#">Community</a>
+                    </li>
+                    <li>
+                        <a href="#">Resources</a>
+                    </li>
+                </ul>
+
+                <ul class="list-unstyled CTAs">
+                    <li><a href="#" class="download">Contact</a></li>
+                    <li><a href="#" class="article">Back </a></li>
+                </ul>
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="navbar-btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <h2> &nbsp; &nbsp; Create a Profile
+                        </h2>
+                    </div>
+                </nav>
+
+                <!-- FORM -->
+                <form>
+                  <div class="form-group">
+                    <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Full Name" size="100" style="background-color: rgba(0,0,0,0.1); color: #FFF;">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" style="background-color: rgba(0,0,0,0.1); color: #FFF;">
+                  </div>
+                  <div class="form-group">
+                    <input type="Username" class="form-control" id="exampleFormControlInput1" placeholder="Username" style="background-color: rgba(0,0,0,0.1); color: #FFF;">
+                  </div>
+                  <div class="form-group">
+                    <input type="hairtype" class="form-control" id="exampleFormControlInput1" placeholder="What is your hair type?" style="background-color: rgba(0,0,0,0.1); color: #FFF;">
+                    <a href="#" data-toggle="popover" title="Hair Type" rel="popover" data-img="hairtype.jpg" style="max-width: 10050px">
+                      <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </a>
+
+                  </div>
+
+                  <div class="form-group">
+                    <input type="yearsnatural" class="form-control" id="exampleFormControlInput1" placeholder="How many years have you been natural?" style="background-color: rgba(0,0,0,0.1); color: #FFF;">
+                  </div>
+                  <div class="form-group">
+                    <input type="skilllevel" class="form-control" id="exampleFormControlInput1" placeholder="What is your haircare skill level?" style="background-color: rgba(0,0,0,0.1); color: #FFF;">
+                  </div>
+
+                  <div class="form-group">
+                    <input type="hairporosity" class="form-control" id="exampleFormControlInput1" placeholder="What is your hair porosity?" style="background-color: rgba(0,0,0,0.1); color: #FFF;">
+                      <a href="#" data-toggle="popover" title="Hair Porosity" rel="popover" data-img="hairporosity.jpg" style="width:400px;">
+                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                      </a>
+                  </div>
+
+                </form>
+
+                <div class="line"></div>
+                <p style="color:#F39C11"> Already a user? <a href="#" style="color:#F39C11">Sign in here.</a> </p>
+
+            </div>
+        </div>
+
+
+        <!-- jQuery CDN -->
+         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+         <!-- Bootstrap Js CDN -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+         <script type="text/javascript">
+              $('a[rel=popover]').popover({
+                html: true,
+                trigger: 'hover',
+                placement: 'bottom',
+                content: function(){return '<img src="'+$(this).data('img') + '" />';}
+              });
+
+             $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                     $(this).toggleClass('active');
+                 });
+             });
+         </script>
+    </body>
+</html>
