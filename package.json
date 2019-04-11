@@ -1,0 +1,23 @@
+{
+  "name": "NQ-Natural-Hair-Headquarters",
+  "version": "1.0.0",
+  "description": "This project is related to the Edit program at University of Florida.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaghayeghEs/NQ-Natural-Hair-Headquarters.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShaghayeghEs/NQ-Natural-Hair-Headquarters/issues"
+  },
+  "homepage": "https://github.com/ShaghayeghEs/NQ-Natural-Hair-Headquarters#readme",
+  "dependencies": {
+    "mongoose": "^5.5.1"
+  }
+}
