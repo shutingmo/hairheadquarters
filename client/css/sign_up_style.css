@@ -10,7 +10,7 @@ body {
     background-image: linear-gradient( /*black overlay over image*/
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
-    ), url(background.jpg);
+    ), url(../images/signupBackground.jpg);
     background-color: rgba(black, 0.5);
     background-repeat:no-repeat;
     background-size: 1440px 1000px;

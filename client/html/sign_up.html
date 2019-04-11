@@ -11,8 +11,10 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- Our Custom CSS -->
         <link rel="stylesheet" href="../css/sign_up_style.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     </head>
-    <body>
+    <body ng-app="hairHeadquarters">
         <div class="wrapper">
             <!-- Sidebar Holder -->
             <nav id="sidebar">
@@ -69,42 +71,57 @@
                 </nav>
 
                 <!-- FORM -->
-                <form>
-                  <div class="form-group">
-                    <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Full Name" size="100" style="background-color: rgba(0,0,0,0.1); color: #FFF;">
-                  </div>
-                  <div class="form-group">
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" style="background-color: rgba(0,0,0,0.1); color: #FFF;">
-                  </div>
-                  <div class="form-group">
-                    <input type="Username" class="form-control" id="exampleFormControlInput1" placeholder="Username" style="background-color: rgba(0,0,0,0.1); color: #FFF;">
-                  </div>
-                  <div class="form-group">
-                    <input type="hairtype" class="form-control" id="exampleFormControlInput1" placeholder="What is your hair type?" style="background-color: rgba(0,0,0,0.1); color: #FFF;">
-                    <a href="#" data-toggle="popover" title="Hair Type" rel="popover" data-img="hairtype.jpg" style="max-width: 10050px">
-                      <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                    </a>
+                <div ng-controller="signupController">
+                    <form>
+                        <div class="input-field">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Full Name" size="100" ng-model="newUser.name" style="background-color: rgba(0,0,0,0.1); color: #FFF;" required>
+                        </div>
 
-                  </div>
+                        <div class="input-field">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Email" ng-model="newUser.email" style="background-color: rgba(0,0,0,0.1); color: #FFF;"required>
+                        </div>
 
-                  <div class="form-group">
-                    <input type="yearsnatural" class="form-control" id="exampleFormControlInput1" placeholder="How many years have you been natural?" style="background-color: rgba(0,0,0,0.1); color: #FFF;">
-                  </div>
-                  <div class="form-group">
-                    <input type="skilllevel" class="form-control" id="exampleFormControlInput1" placeholder="What is your haircare skill level?" style="background-color: rgba(0,0,0,0.1); color: #FFF;">
-                  </div>
+                        <div class="input-field">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username" ng-model="newUser.username" style="background-color: rgba(0,0,0,0.1); color: #FFF;" required>
+                        </div>
 
-                  <div class="form-group">
-                    <input type="hairporosity" class="form-control" id="exampleFormControlInput1" placeholder="What is your hair porosity?" style="background-color: rgba(0,0,0,0.1); color: #FFF;">
-                      <a href="#" data-toggle="popover" title="Hair Porosity" rel="popover" data-img="hairporosity.jpg" style="width:400px;">
-                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                      </a>
-                  </div>
+                        <div class="input-field">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Password" ng-model="newUser.password" style="background-color: rgba(0,0,0,0.1); color: #FFF;" required>
+                        </div>
 
-                </form>
+                        <div class="input-field">
+                            <input type="hairtype" class="form-control" id="exampleFormControlInput1" placeholder="What is your hair type?" style="background-color: rgba(0,0,0,0.1); color: #FFF;" ng-model="newUser.hairtype">
+                            <a href="#" data-toggle="popover" title="Hair Type" rel="popover" data-img="../images/hairtype.jpg" style="max-width: 10050px">
+                            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                            </a>
+    
+                        </div>
+    
+                        <div class="input-field">
+                            <input type="yearsnatural" class="form-control" id="exampleFormControlInput1" placeholder="How many years have you been natural?" style="background-color: rgba(0,0,0,0.1); color: #FFF;" ng-model="newUser.yearsnatural">
+                        </div>
 
-                <div class="line"></div>
-                <p style="color:#F39C11"> Already a user? <a href="#" style="color:#F39C11">Sign in here.</a> </p>
+                        <div class="input-field">
+                            <input type="skilllevel" class="form-control" id="exampleFormControlInput1" placeholder="What is your haircare skill level?" style="background-color: rgba(0,0,0,0.1); color: #FFF;" ng-model="newUser.skilllevel">
+                        </div>
+    
+                        <div class="input-field">
+                            <input type="hairporosity" class="form-control" id="exampleFormControlInput1" placeholder="What is your hair porosity?" style="background-color: rgba(0,0,0,0.1); color: #FFF;" ng-model="newUser.hairporosity">
+                            <a href="#" data-toggle="popover" title="Hair Porosity" rel="popover" data-img="../images/hairporosity.jpg" style="width:400px;">
+                                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                            </a>
+                        </div>
+    
+                        <div class="col-xs-12">
+                            <input type="submit" class="btn btn-primary btn-block" ng-click="signup()" value="Sign Up">
+                        </div>
+    
+                    </form>
+                </div>
+                
+
+                <!-- <div class="line"></div> -->
+                <p style="color:#F39C11"> Already a user? <a href="./login.html" style="color:#F39C11">Sign in here.</a> </p>
 
             </div>
         </div>
@@ -133,5 +150,12 @@
                  });
              });
          </script>
+
+        <!-- <script src="https://code.angularjs.org/1.4.3/angular.js"></script> -->
+        <script src="../js/app.js"></script>
+        <script src="../factories/userFactory.js"></script>
+        <script src="../controllers/signupClientController.js"></script>
+        <!-- <script src="https://code.angularjs.org/1.4.3/angular.js"></script> -->
+
     </body>
 </html>

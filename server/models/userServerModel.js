@@ -20,15 +20,15 @@ var userSchema = new Schema({
         type: String,
         required: true
     },
-    hairType: {
+    hairtype: {
         type: String, 
-        requier: true
+        required: true
     },
-    yearsNatural:{
+    yearsnatural:{
         type: Number,
         required: true
     },
-    skillLevel: {
+    skilllevel: {
         type: Number,
         required: true
     }
