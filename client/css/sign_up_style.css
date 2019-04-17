@@ -241,7 +241,7 @@ a.article, a.article:hover {
 /** fa fa exclamation icon **/
 .fa-exclamation-circle {
     float: right;
-    margin-right: 6px;
+    margin-right: 20px;
     margin-top: -20px;
     position: relative;
     z-index: 2;

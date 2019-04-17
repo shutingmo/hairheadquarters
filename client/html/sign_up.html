@@ -72,13 +72,13 @@
 
                 <!-- FORM -->
                 <div ng-controller="signupController">
-                    <form>
+                    <form name="signupform">
                         <div class="input-field">
                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Full Name" size="100" ng-model="newUser.name" style="background-color: rgba(0,0,0,0.1); color: #FFF;" required>
                         </div>
 
                         <div class="input-field">
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Email" ng-model="newUser.email" style="background-color: rgba(0,0,0,0.1); color: #FFF;"required>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" ng-model="newUser.email" style="background-color: rgba(0,0,0,0.1); color: #FFF;"required>
                         </div>
 
                         <div class="input-field">
@@ -90,7 +90,7 @@
                         </div>
 
                         <div class="input-field">
-                            <input type="hairtype" class="form-control" id="exampleFormControlInput1" placeholder="What is your hair type?" style="background-color: rgba(0,0,0,0.1); color: #FFF;" ng-model="newUser.hairtype">
+                            <select type="hairtype" class="form-control" id="exampleFormControlInput1" placeholder="What is your hair type?" style="background-color: rgba(0,0,0,0.1); color: #FFF;" ng-model="newUser.hairtype" ng-options="x for x in types"></select>
                             <a href="#" data-toggle="popover" title="Hair Type" rel="popover" data-img="../images/hairtype.jpg" style="max-width: 10050px">
                             <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                             </a>
@@ -98,7 +98,7 @@
                         </div>
     
                         <div class="input-field">
-                            <input type="yearsnatural" class="form-control" id="exampleFormControlInput1" placeholder="How many years have you been natural?" style="background-color: rgba(0,0,0,0.1); color: #FFF;" ng-model="newUser.yearsnatural">
+                            <input type="number" min="0" step="1" class="form-control" id="exampleFormControlInput1" placeholder="How many years have you been natural?" style="background-color: rgba(0,0,0,0.1); color: #FFF;" ng-model="newUser.yearsnatural">
                         </div>
 
                         <div class="input-field">
@@ -106,7 +106,7 @@
                         </div>
     
                         <div class="input-field">
-                            <input type="hairporosity" class="form-control" id="exampleFormControlInput1" placeholder="What is your hair porosity?" style="background-color: rgba(0,0,0,0.1); color: #FFF;" ng-model="newUser.hairporosity">
+                            <select type="hairporosity" class="form-control" id="exampleFormControlInput1" placeholder="What is your hair porosity?" style="background-color: rgba(0,0,0,0.1); color: #FFF;" ng-model="newUser.hairporosity" ng-options="x for x in por"></select>
                             <a href="#" data-toggle="popover" title="Hair Porosity" rel="popover" data-img="../images/hairporosity.jpg" style="width:400px;">
                                 <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                             </a>
@@ -139,7 +139,7 @@
               $('a[rel=popover]').popover({
                 html: true,
                 trigger: 'hover',
-                placement: 'bottom',
+                placement: 'right',
                 content: function(){return '<img src="'+$(this).data('img') + '" />';}
               });
 
@@ -149,6 +149,15 @@
                      $(this).toggleClass('active');
                  });
              });
+
+            // var numInput = document.querySelector('input');
+
+            // numInput.addEventListener('input', function(){
+            //     var num = this.value.match(/^\d+$/);
+            //     if (num === null) {
+            //     this.value = "";
+            //     }
+            // });
          </script>
 
         <!-- <script src="https://code.angularjs.org/1.4.3/angular.js"></script> -->
