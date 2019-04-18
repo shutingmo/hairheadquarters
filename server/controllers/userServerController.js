@@ -164,12 +164,14 @@ exports.signupUser = function(req,res){
 
 exports.submitJourEnt = function(req, res){
     var newEntry = new Entry(req.body);
+    newEntry.username = currSessionUser;
+    console.log(JSON.stringify(newEntry.username));
     newEntry.save(function(err){
         if(err) {
             console.log(err)
             res.status(400).send(err)
         } else {
-            console.log('added new user to database');
+            console.log('added new entry to database');
             // verifyUser();
             res.json(newEntry);
         }
