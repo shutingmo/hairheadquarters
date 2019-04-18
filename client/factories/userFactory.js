@@ -24,6 +24,14 @@ angular.module('hairHeadquarters').factory('userFactory', function($http){
                 // )
                 ;
         },
+        getCurrentUser: function(){
+            console.log('in fac id')
+            return $http.get('/account/getinfo');
+
+        },
+        sendPassLink: function(returnUser) {
+            return $http.put('/login/auth', returnUser);
+        },
     };
 
     return userFactoryMethods;

@@ -5,8 +5,8 @@ var database = require('./database'),
     morgan = require('morgan'),
     bodyParser = require('body-parser'),
     loginRouter = require('../routes/loginServerRoutes.js'),
-    signupRouter = require('../routes/signupServerRoutes.js');
-    // jsonwebtoken = require("jsonwebtoken");
+    signupRouter = require('../routes/signupServerRoutes.js'),
+    userRouter = require('../routes/userServerRoutes.js');
 
 
 
@@ -47,6 +47,8 @@ module.exports.init = function(){
     app.use('/signup', signupRouter);
 
     app.use('/login/auth', loginRouter);
+
+    app.use('/account/getinfo', userRouter);
 
     app.all('/*', function(req, res){
         res.redirect('/');

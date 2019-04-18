@@ -1,0 +1,378 @@
+/*
+    DEMO STYLE
+*/
+
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+* {
+  box-sizing: border-box;
+}
+
+spacing {
+  margin: 30px;
+}
+
+space {
+  text-align: center;
+  font-weight: bold;
+  color: brown;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+buttonspace {
+  margin: 20px;
+}
+
+.profile-info {
+  /** change background to see the sections (purple)  background:#0B2C3D; **/
+  background:#0B2C3D;
+  padding:3px
+}
+
+.hair-details-section {
+  background: #0B2C3D;
+  padding: 50px;
+}
+
+.hair-feels-section {
+  background: #62542D;
+  padding-bottom: -500px;
+  padding: -30px;
+}
+
+.friends-section {
+  text-align: center;
+  background: #0B2C3D;
+  padding-top: 40px;
+  padding-bottom: 5px;
+}
+
+.messages {
+  background-color: #0B2C3D;
+  padding-top: 7px;
+}
+
+.app-options {
+  padding-top: 10px;
+  background: #0B2C3D;
+  padding-bottom: -50px;
+}
+
+.app-labels {
+  background: #0B2C3D;
+  padding-top: 0px;
+  text-align: center;
+  color: white;
+}
+
+.center {
+  text-align:center;
+  display:block;
+  float: center;
+}
+
+.center-text {
+  text-align: center;
+  color: white;
+  font-size: 13px;
+}
+
+.username {
+  padding-left: 38px;
+  color: white;
+}
+
+
+.hair-stats{
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  word-spacing: 70px;
+}
+
+.hair-labels {
+  text-align: center;
+  font-weight: bold;
+  color: brown;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.word-spacing {
+  word-spacing: 5px;
+}
+
+/*making profile picture circular and resizing to smaller size*/
+img {
+  padding-top: 15px;
+  border-radius: 30%;
+  height: auto;
+  width: 150px;
+}
+
+.center-right {
+  float: right;
+}
+
+.friends-text {
+  font-size: 12px;
+  text-align: center;
+  color: white;
+}
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0B2C3D;
+    color: #d3a65c;
+    font-weight: normal;
+}
+
+@media screen and (max-width: 700px) {
+  .row, .navbar {
+    flex-direction: column;
+  }
+}
+.glyphicon-light::before {
+  font-weight: 100;
+}
+/* Popup container - can be anything you want */
+.ec-heart-eyes {
+  content: "😍";
+  padding-right: 30px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.ec-heart-eyes .popuptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: -140%; /* the vertical position of the popup box*/
+  left: 10%; /* moves popup box to the left*/
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.ec-heart-eyes .popuptext::after {
+  content: "";
+  position: absolute;
+  transform: rotate(180deg); /*rotate arrow*/
+  bottom: 100%; /*top: 100%*/
+  left: 50%;
+  margin-left: -5px;/* moves arrow horizontally*/
+  border-width: 10px; /*width of arrow*/
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.ec-heart-eyes .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+.ec-slightly-smiling-face {
+  content: "🙂";
+  padding-right: 30px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.ec-slightly-smiling-face .popuptext2 {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  top: 100%; /* the vertical position of the popup box*/
+  left: 10%; /* moves popup box to the left*/
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.ec-slightly-smiling-face .popuptext2::after {
+  content: "";
+  position: absolute;
+  transform: rotate(180deg); /*rotate arrow*/
+  bottom: 100%; /*top: 100%*/
+  left: 50%;
+  margin-left: -5px;/* moves arrow horizontally*/
+  border-width: 10px; /*width of arrow*/
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.ec-slightly-smiling-face .show2 {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/** UNAMUSED **/
+.ec-unamused{
+  content: "🙂";
+  padding-right: 30px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.ec-unamused .popuptext3 {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  top: 100%; /* the vertical position of the popup box*/
+  left: 0%; /* moves popup box to the left*/
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.ec-unamused .popuptext3::after {
+  content: "";
+  position: absolute;
+  transform: rotate(180deg); /*rotate arrow*/
+  bottom: 100%; /*top: 100%*/
+  left: 50%;
+  margin-left: -5px;/* moves arrow horizontally*/
+  border-width: 10px; /*width of arrow*/
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.ec-unamused .show3 {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* CRYING EMOJI**/
+.ec-weary{
+  content: "😩";
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.ec-weary .popuptext4 {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  top: 100%; /* the vertical position of the popup box*/
+  left: -10%; /* moves popup box to the left*/
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.ec-weary .popuptext4::after {
+  content: "";
+  position: absolute;
+  transform: rotate(180deg); /*rotate arrow*/
+  bottom: 100%; /*top: 100%*/
+  left: 50%;
+  margin-left: -5px;/* moves arrow horizontally*/
+  border-width: 10px; /*width of arrow*/
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.ec-weary .show4 {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+
+.my-button {
+    /*button dimensions*/
+    display: flex;
+    text-align: center;
+    width: 75px;
+    height: 75px;
+    padding: 10px 16px;
+    border-radius: 50px;
+    font-size: 24px;
+    display: inline-block;
+    margin: 10px; /* space between buttons */
+    background:  #F59D17; /* background color */
+    color: 	#F8F9F5; /* text color */
+    font-family: ‘Georgia’, serif;
+    font-style: italic;
+    padding: 8px 16px; /* space around text */
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.my-button:hover {
+    background: #666;
+    color: #c1e1e0;
+}
+
+button > span, p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
