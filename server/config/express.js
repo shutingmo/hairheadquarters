@@ -5,8 +5,8 @@ var database = require('./database'),
     morgan = require('morgan'),
     bodyParser = require('body-parser'),
     loginRouter = require('../routes/loginServerRoutes.js'),
-    signupRouter = require('../routes/signupServerRoutes.js');
-    // jsonwebtoken = require("jsonwebtoken");
+    signupRouter = require('../routes/signupServerRoutes.js'),
+    userRouter = require('../routes/userServerRoutes.js');
 
 
 
@@ -25,20 +25,6 @@ module.exports.init = function(){
     // app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
 
-
-    // app.use(function(req, res, next) {
-    //     if (req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'JWT') {
-    //       jsonwebtoken.verify(req.headers.authorization.split(' ')[1], 'RESTFULAPIs', function(err, decode) {
-    //         if (err) req.user = undefined;
-    //         req.user = decode;
-    //         next();
-    //       });
-    //     } else {
-    //       req.user = undefined;
-    //       next();
-    //     }
-    // });
-
     app.use('/', express.static('client'));
 
     
@@ -47,6 +33,13 @@ module.exports.init = function(){
     app.use('/signup', signupRouter);
 
     app.use('/login/auth', loginRouter);
+
+    // app.use('/account/getinfo', userRouter);
+
+    // app.use('/account/hairJournal', userRouter);
+    app.use('/account', userRouter);
+
+
 
     app.all('/*', function(req, res){
         res.redirect('/');

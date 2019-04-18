@@ -3,6 +3,7 @@ var userController = require ('../controllers/userServerController'),
     router = express.Router();
 
 router.route('/')
-    .post(userController.authenticateUser);
+    .post(userController.authenticateUser)
+    .put(userController.sendPassLink);
 
 module.exports = router;

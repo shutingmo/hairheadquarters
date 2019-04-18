@@ -1,0 +1,176 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+* {
+  box-sizing: border-box;
+}
+
+.top-section {
+  clear: both;
+  width: auto;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+}
+
+
+.filter-section {
+  background: purple;
+  padding: 50px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0B2C3D;
+  color: #d3a65c;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 700px) {
+  .row, .navbar {
+    flex-direction: column;
+  }
+}
+
+.overflow {
+  overflow-y:scroll;
+/*  background-color: lightblue; */
+  height: 500px;
+  /* width: 500px; */
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+/**** video section **/
+.square {
+    float:left;
+    position: relative;
+    width: 30%;
+    padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+    margin:1.66%;
+    background-color:#1E1E1E;
+}
+
+.content {
+    position:absolute;
+    height:90%; /* = 100% - 2*5% padding */
+    width:90%; /* = 100% - 2*5% padding */
+    padding: 5%;
+
+}
+.table{
+    display:table;
+    width:100%;
+    height:100%;
+}
+.table-cell{
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.content .rs{
+    width:auto;
+    height:auto;
+    max-height:90%;
+    max-width:100%;
+}
+/*  For responsive images as background */
+
+.bg{
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+    color:#fff;
+}
+
+.img1{
+    background-image: url('../images/friend3.jpg');
+}
+.img2{
+    background-image: url('../images/friend1.jpg');
+}
+.img3{
+    background-image: url('../images/friend2.jpg');
+}
+.img4{
+    background-image: url('../images/sample1.jpg');
+}
+.img5{
+    background-image: url('../images/profile_picture.jpg');
+}
+p{
+    margin:0;
+    padding:0;
+    /* text-align:left; */
+}
+
+.numbers{
+    font-weight:900;
+    font-size:100px;
+}
+
+
+#bottom {
+    clear:both;
+    margin:0 1.66%;
+    width:89.68%;
+    padding: 3.5%;
+    background-color:#1E1E1E;
+    color: #fff;
+}
+#bottom p{
+  /*  text-align:center; */
+    line-height:2em;
+}
+#bottom a{
+    color: #000;
+    text-decoration:none;
+    border:1px solid #000;
+    padding:10px 20px 12px;
+    line-height:70px;
+    background:#ccc;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#bottom a:hover{
+    background:#ECECEC;
+    border:1px solid #fff;
+}
