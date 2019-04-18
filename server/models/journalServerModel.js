@@ -5,11 +5,11 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var journalSchema = new Schema({
-    username: {
-        type: String,
-        // required: true,
-        unique: true
-    },
+    // username: {
+    //     type: String,
+    //     // required: true,
+    //     // unique: true
+    // },
     entry:{
         type: String,
         required: true
