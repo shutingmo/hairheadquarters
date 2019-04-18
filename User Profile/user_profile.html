@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>User Profile</title>
+         <!-- Bootstrap CSS CDN -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Our Custom CSS -->
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+        <link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
+        <link rel="stylesheet" href="user_profile.css">
+    </head>
+    <body>
+      <!-- user profile section -->
+      <div class="profile-info">
+        <i class="fa fa-angle-left" style="font-size:60px; color:#d3a65c;"></i>
+        <i class="fa fa-plus" style="font-size:35px; color: white; font-weight:-30px; float:right;"></i>
+        <div class="center-right">
+          <img src="images/profile_picture.jpg" alt="Avatar">
+          <div class="username">
+          @indiecurls
+          </div>
+        </div>
+
+        <div="shift-down">
+          <hr width= 50% align="left">
+          <h5 style="padding-left: 10px; text-align:left; font-weight: normal;">Indieholic|Afrocentric. On a <br/> journey
+                                      transforming my kinky strands into
+                                      manageable curls.</h5>
+          <hr width= 55% align="center"> <!-- can add padding to make row thicker!-->
+        </div>
+        <!-- <font color="white"> @indiecurls </font> -->
+      </div>
+
+      <!-- hair details section -->
+      <div class="hair-details-section">
+        <div class="hair-stats">
+            3
+            3C/4A
+            Intermediate
+        </div>
+        <div class="hair-labels">
+          Years Natural <spacing>
+          Hair Type <spacing>
+          Skill Level <spacing>
+        </div>
+      </div>
+
+      <div class="hair-feels-section">
+        <div class="center-text">
+          How do you feel about your hair today? <br/> <br/>
+        </div>
+        <div class="center">
+
+          <div class="ec-heart-eyes" style="font-size:3rem;" onclick="myFunction()">
+            <span class="popuptext" style="font-size: 12px;" id="myPopup">Hey indiecurls! We see you feel 😍! We're glad you're loving your hair!</span>
+          </div>
+
+          <div class="ec-slightly-smiling-face" style="font-size:3rem;" onclick="myFunction2()">
+            <span class="popuptext2" style="font-size: 12px;" id="myPopup2">Hey indiecurls! We see you feel 🙂 about your hair!</span>
+          </div>
+
+          <div class="ec-unamused" style="font-size:3rem;" onclick="myFunction3()">
+            <span class="popuptext3" style="font-size: 12px;" id="myPopup3">Hey indiecurls! We see you feel 😒 about your hair today. We recommend looking at our hair bible!</span>
+          </div>
+
+          <div class="ec-weary" style="font-size:3rem;" onclick="myFunction4()">
+            <span class="popuptext4" style="font-size: 12px;" id="myPopup4">Hey indiecurls! We see you feel 😩 about your hair today. We recommend checking out our Healthy Hair Bible to get you on the right track!</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="friends-section">
+        <img src="images/friend1.jpg" alt="Avatar1" style="border-radius: 35%; height: auto; width: 70px;">
+        <img src="images/friend2.jpg" alt="Avatar2" style="border-radius: 35%; height: auto; width: 70px;">
+        <img src="images/friend3.jpg" alt="Avatar3" style="border-radius: 35%; height: auto; width: 70px;">
+      </div>
+
+      <div class="messages">
+        <div class="friends-text">
+          3 of your hairsisters just joined the <br/>
+          Long Hair Don't Care Challenege. <br/>
+          Chat about it in the Community.
+        </div>
+      </div>
+
+
+
+      <div class="app-options">
+        <p>
+          <span> <a class="my-button" href="hair_journal.html">
+          <i class="glyphicon glyphicon-book" style="top:13px; font-size:35px;"></i></a></span>
+          <span> <a class="my-button" href="#">
+          <i class="fa fa-edit" style="padding-top:10px; padding-left: 5px; font-size:40px;"></i></a></span>
+          <span> <a class="my-button" href="#">
+          <i class="glyphicon glyphicon-list-alt" style="top:13px; font-size:35px;"></i> </a> </span>
+        </p>
+      </div>
+
+      <div class="app-labels">
+
+      </div>
+      <script>
+      // When the user clicks on div, open the popup
+      function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+      }
+
+      function myFunction2() {
+        var popup2 = document.getElementById("myPopup2");
+        popup2.classList.toggle("show2");
+      }
+
+      function myFunction3() {
+        var popup3 = document.getElementById("myPopup3");
+        popup3.classList.toggle("show3");
+      }
+
+      function myFunction4() {
+        var popup4 = document.getElementById("myPopup4");
+        popup4.classList.toggle("show4");
+      }
+      </script>
+      <!-- jQuery CDN -->
+      <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+      <!-- Bootstrap Js CDN -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+      <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+    </body>
+</html>
