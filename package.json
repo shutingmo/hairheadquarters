@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "hairapp",
   "version": "1.0.0",
   "description": "EDIT Program Natural Hair Headquarters App",
@@ -23,27 +22,5 @@
     "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.9.1"
-=======
-  "name": "NQ-Natural-Hair-Headquarters",
-  "version": "1.0.0",
-  "description": "This project is related to the Edit program at University of Florida.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ShaghayeghEs/NQ-Natural-Hair-Headquarters.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ShaghayeghEs/NQ-Natural-Hair-Headquarters/issues"
-  },
-  "homepage": "https://github.com/ShaghayeghEs/NQ-Natural-Hair-Headquarters#readme",
-  "dependencies": {
-    "mongoose": "^5.5.1"
->>>>>>> 6d28f013e681bf3965e48a82946095b0c7b0fffd
   }
 }
