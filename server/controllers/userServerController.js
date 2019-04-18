@@ -1,6 +1,7 @@
 var express = require('express'),
     mongoose = require('mongoose'),
     User = require('../models/userServerModel'),
+    Entry = require('../models/journalServerModel'),
     bcrypt = require('bcrypt'),
     jwt = require('jsonwebtoken');
     nodemailer = require('nodemailer');
@@ -153,10 +154,24 @@ exports.signupUser = function(req,res){
             } else {
                 console.log('added new user to database');
                 // verifyUser();
-                user.hash_password = undefined;
+                // user.hash_password = undefined;
                 res.json(newUser);
             }
         })
     }
 
 };
+
+exports.submitJourEnt = function(req, res){
+    var newEntry = new Entry(req.body);
+    newEntry.save(function(err){
+        if(err) {
+            console.log(err)
+            res.status(400).send(err)
+        } else {
+            console.log('added new user to database');
+            // verifyUser();
+            res.json(newEntry);
+        }
+    })
+}

@@ -32,6 +32,10 @@ angular.module('hairHeadquarters').factory('userFactory', function($http){
         sendPassLink: function(returnUser) {
             return $http.put('/login/auth', returnUser);
         },
+        submitJourEntry: function(journal){
+            console.log(JSON.stringify(journal));
+            return $http.post('/account/hairJournal', journal);
+        }
     };
 
     return userFactoryMethods;
