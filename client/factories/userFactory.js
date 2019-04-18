@@ -1,7 +1,7 @@
 angular.module('hairHeadquarters').factory('userFactory', function($http){
     var userFactoryMethods = {
         signupUser: function(user){
-            console.log('in factory');
+            console.log('in user factory signup ' + JSON.stringify(user))
             return $http.post('/signup', user);
         },
 
